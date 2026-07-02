@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wajeeha Batool | Full-Stack Web Developer & Computer Science Student</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Glow Accent -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-brand-500/50 to-transparent z-50"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-slate-100 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-display font-bold text-sm tracking-tighter group-hover:bg-brand-700 transition-all shadow-md shadow-brand-500/10">
+                    WB
+                </div>
+                <span class="text-sm font-bold text-slate-900 tracking-tight font-display">
+                    Wajeeha<span class="text-brand-600">.</span>
+                </span>
+            </a>
+
+            <!-- Navigation Items (Desktop) -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-xs font-bold text-slate-900 hover:text-brand-600 tracking-wider uppercase transition-colors">Home</a>
+                <a href="#about" class="text-xs font-bold text-slate-500 hover:text-brand-600 tracking-wider uppercase transition-colors">About</a>
+                <a href="#skills" class="text-xs font-bold text-slate-500 hover:text-brand-600 tracking-wider uppercase transition-colors">Skills</a>
+                <a href="#projects" class="text-xs font-bold text-slate-500 hover:text-brand-600 tracking-wider uppercase transition-colors">Projects</a>
+                <a href="#contact" class="text-xs font-bold text-slate-500 hover:text-brand-600 tracking-wider uppercase transition-colors">Contact</a>
+            </nav>
+
+            <!-- Navigation Button -->
+            <div>
+                <a href="#contact" class="inline-flex items-center gap-1.5 bg-brand-50 hover:bg-brand-100 text-brand-700 text-xs font-bold px-4 py-2 rounded-xl border border-brand-100/50 transition-colors">
+                    <span>Hire Me</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative overflow-hidden">
+        <!-- Ambient blurred decor backgrounds -->
+        <div class="absolute top-1/4 right-10 w-96 h-96 bg-brand-200/20 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-teal-200/20 rounded-full blur-3xl -z-10"></div>
+
+        <!-- 1. Hero Section -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                    
+                    <!-- Intro Copy - Main Bento Box -->
+                    <div class="md:col-span-7 bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-sm space-y-6 flex flex-col justify-center relative overflow-hidden">
+                        <!-- Tiny pattern overlay -->
+                        <div class="absolute inset-0 bg-[radial-gradient(#f1f5f9_1px,transparent_1px)] [background-size:16px_16px] opacity-60"></div>
+                        
+                        <div class="relative z-10 space-y-6">
+                            <!-- Profile Greeting Tag -->
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                                Available for Projects
+                            </div>
+
+                            <!-- Header Title -->
+                            <div class="space-y-3">
+                                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-950 tracking-tight leading-[1.1]">
+                                    Hi, I'm <span class="text-brand-600 bg-gradient-to-r from-brand-600 to-violet-600 bg-clip-text text-transparent">Wajeeha Batool</span>
+                                </h1>
+                                <p class="text-lg sm:text-xl font-medium text-slate-600 max-w-xl font-display">
+                                    Full-Stack Web Developer &amp; Computer Science Student
+                                </p>
+                            </div>
+
+                            <!-- Biography Summary -->
+                            <p class="text-slate-500 text-sm sm:text-base leading-relaxed max-w-2xl">
+                                I'm a passionate Computer Science student and aspiring Full-Stack Web Developer from Pakistan. I enjoy building responsive web applications, solving real-world problems, and continuously learning modern web technologies and AI.
+                            </p>
+
+                            <!-- Action buttons CTA -->
+                            <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                                <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white font-bold text-sm px-6 py-3 rounded-xl transition-all shadow-md shadow-slate-900/10">
+                                    View My Work
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm px-6 py-3 border border-slate-200 rounded-xl transition-colors shadow-sm">
+                                    Contact Me
+                                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+
+                            <!-- Social and Location Icons -->
+                            <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-100 text-xs font-mono text-slate-500">
+                                <div class="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-500"></i>
+                                    <span class="font-sans font-medium">Hyderabad, Pakistan</span>
+                                </div>
+                                <a href="mailto:batoolw872@gmail.com" class="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 hover:text-brand-600 hover:border-brand-300 transition-all">
+                                    <i data-lucide="mail" class="w-3.5 h-3.5 text-red-400"></i>
+                                    <span class="font-sans font-medium">batoolw872@gmail.com</span>
+                                </a>
+                                <a href="https://github.com/batoolw872-stack" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 hover:text-slate-900 hover:border-slate-400 transition-all">
+                                    <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                                    <span class="font-sans font-medium">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Graphic/Illustration Panel -->
+                    <div class="md:col-span-5 flex justify-center items-center">
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
+                            <!-- Decorative glowing gradient ring -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 via-violet-500 to-teal-400 rounded-full blur-xl opacity-30"></div>
+                            
+                            <!-- Simulated professional graphic avatar container -->
+                            <div class="absolute inset-4 rounded-3xl bg-slate-900 border-2 border-slate-800 flex flex-col items-center justify-center p-8 text-center text-white overflow-hidden shadow-2xl">
+                                <!-- Grid overlay -->
+                                <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+                                
+                                <div class="relative z-10 space-y-4">
+                                    <div class="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center mx-auto text-brand-400 shadow-lg shadow-brand-500/5">
+                                        <i data-lucide="terminal" class="w-8 h-8"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-mono text-emerald-400">&lt;coder_profile&gt;</div>
+                                        <div class="font-display font-black text-2xl tracking-tight mt-1">Wajeeha Batool</div>
+                                        <div class="text-[11px] font-mono text-slate-400 mt-1 font-sans">CS Student &amp; Developer</div>
+                                    </div>
+
+                                    <div class="border-t border-slate-800 pt-4 flex items-center justify-center gap-6 text-[10px] font-mono text-slate-400">
+                                        <div>
+                                            <span class="block text-white font-bold text-base">Coming</span>
+                                            Projects
+                                        </div>
+                                        <div class="w-px h-6 bg-slate-800"></div>
+                                        <div>
+                                            <span class="block text-white font-bold text-base">9+</span>
+                                            Key Skills
+                                        </div>
+                                    </div>
+
+                                    <!-- Floating mini code status snippet -->
+                                    <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-2 px-3 text-left font-mono text-[9px] max-w-[200px] mx-auto text-slate-300">
+                                        <span class="text-pink-400">const</span> skills = [<br>
+                                        &nbsp;&nbsp;<span class="text-teal-300">"React"</span>, <span className="text-teal-300">"PHP"</span>,<br>
+                                        &nbsp;&nbsp;<span class="text-teal-300">"MySQL"</span>, <span className="text-teal-300">"AI"</span><br>
+                                        ];
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Outer floating accents -->
+                            <div class="absolute top-8 left-0 bg-white border border-slate-100 rounded-2xl p-3 shadow-md flex items-center gap-2.5 animate-bounce" style="animation-duration: 4s;">
+                                <div class="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center text-teal-600">
+                                    <i data-lucide="award" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-slate-400 font-semibold uppercase leading-none">University</span>
+                                    <span class="text-xs font-bold text-slate-800">MUET Student</span>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-8 right-0 bg-white border border-slate-100 rounded-2xl p-3 shadow-md flex items-center gap-2.5 animate-bounce" style="animation-duration: 6s;">
+                                <div class="w-7 h-7 rounded-lg bg-brand-50 flex items-center justify-center text-brand-600">
+                                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-slate-400 font-semibold uppercase leading-none">Specialization</span>
+                                    <span class="text-xs font-bold text-slate-800">AI Prompt Eng.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me & Education Section -->
+        <section class="py-20 bg-slate-50/50 border-y border-slate-100" id="about">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title -->
+                <div class="text-center md:text-left space-y-2 mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-3 py-1 rounded-full">
+                        Get To Know Me
+                    </span>
+                    <h2 class="text-3xl font-display font-extrabold text-slate-900 tracking-tight sm:text-4xl">About &amp; Education</h2>
+                    <div class="h-1 w-12 bg-brand-600 rounded mt-2 mx-auto md:mx-0"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    
+                    <!-- Bio story - Bento light card -->
+                    <div class="lg:col-span-7 bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-sm flex flex-col justify-between relative overflow-hidden">
+                        <div class="space-y-6">
+                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                                <span class="w-6 h-[2px] bg-slate-200"></span> About Me
+                            </h3>
+                            <p class="text-xl sm:text-2xl font-light text-slate-700 leading-relaxed italic">
+                                "As a Computer Science student, I merge academic knowledge with hands-on development to build robust web systems. I am highly interested in the intersection of AI and traditional full-stack frameworks, allowing me to engineer smarter, user-first experiences. My journey started with clean HTML & CSS, quickly leading into responsive layouts, relational database design with PHP & MySQL, and modern frontend development with React and interactive animations."
+                            </p>
+                        </div>
+                        
+                        <!-- Quick stats tags -->
+                        <div class="grid grid-cols-2 gap-6 pt-8 mt-8 border-t border-slate-100">
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Primary Core</span>
+                                <p class="text-sm font-bold text-slate-800">Full-Stack Web Dev</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Interests</span>
+                                <p class="text-sm font-bold text-slate-800">AI Prompting &amp; UX</p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Availability</span>
+                                <p class="text-sm font-bold text-emerald-600 flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    Open to Work
+                                </p>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Hub Location</span>
+                                <p class="text-sm font-bold text-slate-800">Hyderabad, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic timeline - Bento dark card -->
+                    <div class="lg:col-span-5 flex items-stretch">
+                        <div class="w-full bg-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-10 flex flex-col justify-between shadow-sm relative overflow-hidden">
+                            <!-- Decorative background overlay -->
+                            <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+                            
+                            <!-- Watermark icon -->
+                            <div class="absolute top-8 right-8 text-slate-800/60">
+                                <i data-lucide="graduation-cap" class="w-16 h-16"></i>
+                            </div>
+
+                            <div class="space-y-8 relative z-10">
+                                <span class="text-xs font-bold text-teal-300 bg-teal-900/40 border border-teal-800/50 px-3 py-1 rounded-full uppercase tracking-wider">
+                                    Education Journey
+                                </span>
+                                
+                                <div class="space-y-4">
+                                    <span class="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-slate-400">
+                                        <i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-400"></i>
+                                        2023 - Present
+                                    </span>
+                                    <h4 class="text-xl font-bold text-white tracking-tight leading-tight">
+                                        Bachelor of Science in Computer Science
+                                    </h4>
+                                    <p class="text-xs font-bold text-brand-400">
+                                        Mehran University of Engineering and Technology (MUET)
+                                    </p>
+                                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                                        Deepening foundational knowledge in algorithms, database design, software engineering, and artificial intelligence.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-5 border-t border-slate-900 relative z-10">
+                                <div class="flex items-center gap-2 text-xs text-slate-400 font-medium font-mono">
+                                    <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+                                    Status: <span class="text-teal-300 font-bold uppercase">Ongoing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section class="py-20 bg-slate-50 border-b border-slate-100" id="skills">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title -->
+                <div class="text-center space-y-2 mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-3 py-1 rounded-full">
+                        Core Expertise
+                    </span>
+                    <h2 class="text-3xl font-display font-extrabold text-slate-900 tracking-tight sm:text-4xl">Skills &amp; Toolkit</h2>
+                    <p class="text-sm text-slate-500 max-w-md mx-auto">
+                        A comprehensive list of my technical capabilities, languages, and modern tools sorted by domain.
+                    </p>
+                    <div class="h-1 w-12 bg-brand-600 rounded mt-2 mx-auto"></div>
+                </div>
+
+                <!-- Filtering Tabs -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                    <button onclick="filterSkills('all')" id="tab-all" class="skill-tab px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer bg-brand-600 text-white">
+                        All Skills
+                    </button>
+                    <button onclick="filterSkills('frontend')" id="tab-frontend" class="skill-tab px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200">
+                        Frontend
+                    </button>
+                    <button onclick="filterSkills('backend')" id="tab-backend" class="skill-tab px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200">
+                        Backend &amp; DB
+                    </button>
+                    <button onclick="filterSkills('specializations')" id="tab-specializations" class="skill-tab px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200">
+                        Specializations
+                    </button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-grid">
+                    <!-- HTML5 & CSS3 -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="frontend">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Frontend</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">95%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">HTML5 &amp; CSS3</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Structuring modern, semantic web pages with emphasis on web standards and clean SEO foundations.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-orange-500" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="frontend">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Frontend</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">88%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">JavaScript (ES6+)</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Crafting responsive user interfaces, manipulating DOM elements, and handling async operations securely.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-yellow-500" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap & Tailwind -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="frontend">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Frontend</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">90%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">Bootstrap &amp; Tailwind</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Building mobile-first layouts with adaptive utility-first styles and grid systems.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-teal-500" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- React.js -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="frontend">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Frontend</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">82%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">React.js</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Designing component-based, highly dynamic single-page applications with clean state management.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-sky-500" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHP -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="backend">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Backend &amp; DB</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">85%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">PHP &amp; Session Auth</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Writing server-side backend logic, processing form requests, and managing secure user sessions.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-indigo-500" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="backend">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Backend &amp; DB</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">84%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">MySQL &amp; Relational DB</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Designing normalized schemas, constructing optimized SQL queries, and maintaining data integrity.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-blue-600" style="width: 84%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Prompt Engineering -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="specializations">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Specializations</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">92%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">AI Prompt Engineering</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Leveraging LLMs for code optimization, structural generation, debugging, and dynamic AI assistant workflows.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-violet-600" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Responsive Design -->
+                    <div class="skill-card bg-white border border-slate-150 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between" data-category="specializations">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">Specializations</span>
+                                <span class="text-xs font-mono font-bold text-slate-700">94%</span>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-bold text-slate-950">Responsive Web Design</h4>
+                                <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Ensuring seamless cross-device compatibility, testing viewpoints, fluid grids, and touch target scaling.</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 space-y-1">
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full bg-emerald-500" style="width: 94%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section class="py-20 bg-white border-b border-slate-100" id="projects">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title -->
+                <div class="text-center space-y-2 mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-3 py-1 rounded-full">
+                        My Portfolio
+                    </span>
+                    <h2 class="text-3xl font-display font-extrabold text-slate-900 tracking-tight sm:text-4xl">Featured Projects</h2>
+                    <p class="text-sm text-slate-500 max-w-md mx-auto">
+                        A selection of academic and standalone software applications showcasing my architectural styles.
+                    </p>
+                    <div class="h-1 w-12 bg-brand-600 rounded mt-2 mx-auto"></div>
+                </div>
+
+                <!-- Project Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-cards-grid">
+                    
+                    <!-- Card 1: Smart Student Study Planner -->
+                    <div class="bg-white border border-slate-150 rounded-3xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <!-- Category and Icon -->
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-2.5 py-1 rounded-full">
+                                    AI & Productivity
+                                </span>
+                                <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="brain" class="w-4.5 h-4.5"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Title & Info -->
+                            <div class="space-y-1.5">
+                                <h3 class="text-lg font-bold text-slate-950 font-display group-hover:text-brand-600 transition-colors">
+                                    Smart Student Study Planner
+                                </h3>
+                                <p class="text-xs text-slate-500 leading-relaxed">
+                                    An AI-powered academic helper to organize tasks, track study streaks, and manage study times dynamically.
+                                </p>
+                            </div>
+
+                            <!-- Tech Stack tags -->
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">React</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">Vite</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">Tailwind</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">Framer Motion</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Action Links -->
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+                            <a href="https://github.com/batoolw872-stack/Smart-Student-Study-Planner" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-slate-600 hover:text-slate-900 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://smart-student-study-planner-546060941674.asia-southeast1.run.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 hover:text-brand-700 transition-colors">
+                                <span>Live Demo</span>
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Interactive Developer Portfolio -->
+                    <div class="bg-white border border-slate-150 rounded-3xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <!-- Category and Icon -->
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-2.5 py-1 rounded-full">
+                                    Utilities
+                                </span>
+                                <div class="w-8 h-8 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="user" class="w-4.5 h-4.5"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Title & Info -->
+                            <div class="space-y-1.5">
+                                <h3 class="text-lg font-bold text-slate-950 font-display group-hover:text-brand-600 transition-colors">
+                                    Interactive Developer Portfolio
+                                </h3>
+                                <p class="text-xs text-slate-500 leading-relaxed">
+                                    A high-performance personal web portfolio showcasing achievements, academic journey at MUET, and full-stack utilities.
+                                </p>
+                            </div>
+
+                            <!-- Tech Stack tags -->
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">HTML5</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">CSS3</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">Tailwind</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">JS ES6</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Action Links -->
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+                            <a href="https://github.com/batoolw872-stack" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-slate-600 hover:text-slate-900 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://wajeeha-batool-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 hover:text-brand-700 transition-colors">
+                                <span>Live Demo</span>
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Classic Snake Game -->
+                    <div class="bg-white border border-slate-150 rounded-3xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <!-- Category and Icon -->
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-2.5 py-1 rounded-full">
+                                    Frontend & Games
+                                </span>
+                                <div class="w-8 h-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i data-lucide="gamepad-2" class="w-4.5 h-4.5"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Title & Info -->
+                            <div class="space-y-1.5">
+                                <h3 class="text-lg font-bold text-slate-950 font-display group-hover:text-brand-600 transition-colors">
+                                    Classic Snake Game
+                                </h3>
+                                <p class="text-xs text-slate-500 leading-relaxed">
+                                    An interactive classic arcade game featuring dynamic difficulty levels, high-score tracking, and smooth rendering.
+                                </p>
+                            </div>
+
+                            <!-- Tech Stack tags -->
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">Canvas</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">JS ES6</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">Tailwind</span>
+                                <span class="text-[9px] font-mono font-bold text-slate-500 bg-slate-50 border border-slate-200/60 rounded px-1.5 py-0.5">Local Storage</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Action Links -->
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+                            <a href="https://github.com/batoolw872-stack/snake-game" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-slate-600 hover:text-slate-900 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://ais-pre-hzeipnlbvp4zdf7fug4vib-62077408917.asia-southeast1.run.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 hover:text-brand-700 transition-colors">
+                                <span>Live Demo</span>
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section class="py-20 bg-slate-50" id="contact">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title -->
+                <div class="text-center space-y-2 mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-3 py-1 rounded-full">
+                        Get In Touch
+                    </span>
+                    <h2 class="text-3xl font-display font-extrabold text-slate-900 tracking-tight sm:text-4xl">Let's Collaborate</h2>
+                    <p class="text-sm text-slate-500 max-w-md mx-auto">
+                        Have an opportunity, questions, or want to discuss a custom web design project? Drop a line!
+                    </p>
+                    <div class="h-1 w-12 bg-brand-600 rounded mt-2 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    
+                    <!-- Contact Form Card -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm flex flex-col h-full">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2 font-display">Send a Message</h3>
+                            <p class="text-xs text-slate-500 mb-6">
+                                Fill out the form below. Your messages will be stored securely in your local browser storage for review!
+                            </p>
+
+                            <!-- Live Feedback Notification -->
+                            <div id="form-feedback" class="hidden mb-6 p-4 rounded-xl text-xs font-semibold"></div>
+
+                            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5 flex-grow">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="space-y-1.5">
+                                        <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-500">Your Name</label>
+                                        <input type="text" id="name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:border-brand-500 outline-none transition-all" placeholder="John Doe">
+                                    </div>
+                                    <div class="space-y-1.5">
+                                        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-500">Your Email</label>
+                                        <input type="email" id="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:border-brand-500 outline-none transition-all" placeholder="john@example.com">
+                                    </div>
+                                </div>
+
+                                <div class="space-y-1.5">
+                                    <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-slate-500">Subject</label>
+                                    <input type="text" id="subject" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:border-brand-500 outline-none transition-all" placeholder="Freelance Web Project">
+                                </div>
+
+                                <div class="space-y-1.5">
+                                    <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-500">Message Content</label>
+                                    <textarea id="message" rows="4" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:bg-white focus:border-brand-500 outline-none transition-all resize-none" placeholder="Hey Wajeeha, I would love to build a web app with you..."></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-md shadow-brand-500/10 cursor-pointer">
+                                    <span>Send Message</span>
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details Sidebar Bento Card -->
+                    <div class="lg:col-span-5 space-y-6">
+                        
+                        <!-- Accent Blue Card -->
+                        <div class="bg-brand-600 text-white border border-brand-700/50 rounded-3xl p-8 shadow-md flex flex-col justify-between relative overflow-hidden">
+                            <!-- Overlay Grid -->
+                            <div class="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
+                            
+                            <div class="space-y-8 relative z-10">
+                                <h3 class="text-xl font-bold text-white font-display">Contact Information</h3>
+                                
+                                <div class="space-y-5">
+                                    <!-- Email Field -->
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center text-white shrink-0 border border-white/5">
+                                            <i data-lucide="mail" class="w-5 h-5"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="block text-[10px] text-brand-100 font-bold uppercase tracking-wider">Send an Email</span>
+                                            <button onclick="copyToClipboard('batoolw872@gmail.com')" class="text-sm font-bold text-white hover:text-brand-100 transition-colors text-left flex items-center gap-1.5 group cursor-pointer">
+                                                <span>batoolw872@gmail.com</span>
+                                                <i data-lucide="copy" class="w-3.5 h-3.5 text-white/60 group-hover:text-white"></i>
+                                            </button>
+                                            <span id="copy-notification" class="hidden text-[10px] text-emerald-300 font-semibold block">Email address copied!</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- GitHub Field -->
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center text-white shrink-0 border border-white/5">
+                                            <i data-lucide="github" class="w-5 h-5"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="block text-[10px] text-brand-100 font-bold uppercase tracking-wider">Explore Repositories</span>
+                                            <a href="https://github.com/batoolw872-stack" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-white hover:text-brand-100 transition-colors flex items-center gap-1">
+                                                <span>github.com/batoolw872-stack</span>
+                                                <i data-lucide="external-link" class="w-3 h-3 text-white/60"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Location Field -->
+                                    <div class="flex items-start gap-4">
+                                        <div class="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center text-white shrink-0 border border-white/5">
+                                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="block text-[10px] text-brand-100 font-bold uppercase tracking-wider">Based In</span>
+                                            <span class="text-sm font-bold text-white">Hyderabad, Pakistan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-6 border-t border-white/10 relative z-10">
+                                <div class="bg-white/10 border border-white/10 rounded-2xl p-4 flex items-start gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-white text-brand-600 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i data-lucide="zap" class="w-3 h-3"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-white">Freelance Available</h4>
+                                        <p class="text-[11px] text-brand-100 mt-0.5 leading-relaxed">
+                                            Currently accepting freelance projects, custom web integration work, and tutoring support assignments.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLA Response Card -->
+                        <div class="bg-slate-900 text-white border border-slate-800 rounded-3xl p-5 shadow-md flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-400 shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase font-mono">Response Duration</h4>
+                                <p class="text-sm font-bold mt-0.5 text-slate-100">Usually Replies within 24 Hours</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Messages Log (Stored Locally) -->
+                <div id="local-messages-container" class="mt-12 bg-white rounded-3xl border border-slate-200 p-8 shadow-sm hidden">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-950 font-display">Stored Session Messages</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">These are saved locally in your current browser session</p>
+                        </div>
+                        <button onclick="clearLocalMessages()" class="text-xs font-bold text-red-600 hover:text-red-700 hover:bg-red-50 px-3 py-1.5 rounded-xl border border-red-100 transition-colors">
+                            Clear Logs
+                        </button>
+                    </div>
+                    <div id="local-messages-list" class="space-y-4"></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="text-xs font-mono">
+                &copy; 2026 Wajeeha Batool. Built with pure HTML, Tailwind, and love.
+            </p>
+            <div class="flex justify-center gap-6 text-xs font-semibold">
+                <a href="#" class="hover:text-white transition-colors">Back to Top</a>
+                <span class="text-slate-800">|</span>
+                <a href="https://github.com/batoolw872-stack" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub Profiling</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Controller Script -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Interactive Skills Category Filter
+        function filterSkills(category) {
+            const cards = document.querySelectorAll('.skill-card');
+            const tabs = document.querySelectorAll('.skill-tab');
+
+            // Reset active tabs classes
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-brand-600', 'text-white');
+                tab.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+            });
+
+            // Set current tab active
+            const activeTab = document.getElementById(`tab-${category}`);
+            if (activeTab) {
+                activeTab.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+                activeTab.classList.add('bg-brand-600', 'text-white');
+            }
+
+            // Filter the cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 2. Interactive Form Submission & Storing locally
+        function loadLocalMessages() {
+            const container = document.getElementById('local-messages-container');
+            const list = document.getElementById('local-messages-list');
+            const raw = localStorage.getItem('batool_portfolio_messages') || '[]';
+            const messages = JSON.parse(raw);
+
+            if (messages.length > 0) {
+                container.classList.remove('hidden');
+                list.innerHTML = '';
+                messages.reverse().forEach((msg, idx) => {
+                    const card = document.createElement('div');
+                    card.className = 'p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between space-y-2';
+                    card.innerHTML = `
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-800">${escapeHtml(msg.name)} (${escapeHtml(msg.email)})</span>
+                            <span class="text-[10px] font-mono text-slate-400">${escapeHtml(msg.date)}</span>
+                        </div>
+                        <div class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Sub: ${escapeHtml(msg.subject)}</div>
+                        <p class="text-xs text-slate-600 leading-relaxed">${escapeHtml(msg.message)}</p>
+                    `;
+                    list.appendChild(card);
+                });
+            } else {
+                container.classList.add('hidden');
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const feedback = document.getElementById('form-feedback');
+            
+            try {
+                // Save Message to localStorage
+                const raw = localStorage.getItem('batool_portfolio_messages') || '[]';
+                const messages = JSON.parse(raw);
+                const date = new Date().toLocaleString();
+                messages.push({ name, email, subject, message, date });
+                localStorage.setItem('batool_portfolio_messages', JSON.stringify(messages));
+
+                // Clear input values
+                document.getElementById('contact-form').reset();
+
+                // Show Success Message
+                feedback.className = 'mb-6 p-4 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-100';
+                feedback.innerText = 'Success! Your message was submitted and stored locally in this browser.';
+                feedback.classList.remove('hidden');
+
+                // Reload local messages UI
+                loadLocalMessages();
+            } catch (err) {
+                feedback.className = 'mb-6 p-4 rounded-xl text-xs font-semibold bg-red-50 text-red-800 border border-red-100';
+                feedback.innerText = 'Failed to submit message locally. Please try again.';
+                feedback.classList.remove('hidden');
+            }
+
+            // Hide feedback after 5 seconds
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 5000);
+        }
+
+        function clearLocalMessages() {
+            localStorage.removeItem('batool_portfolio_messages');
+            loadLocalMessages();
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const notif = document.getElementById('copy-notification');
+                notif.classList.remove('hidden');
+                setTimeout(() => {
+                    notif.classList.add('hidden');
+                }, 2000);
+            });
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+
+        // Initial loading invocation
+        window.addEventListener('DOMContentLoaded', () => {
+            loadLocalMessages();
+        });
+    </script>
+</body>
+</html>
